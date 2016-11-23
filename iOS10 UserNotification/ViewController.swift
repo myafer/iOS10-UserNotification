@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         
         
         self.sendLocalNotification()
-        self.sendLocalNotification1()
-        self.sendLocalNotification2()
+//        self.sendLocalNotification1()
+//        self.sendLocalNotification2()
 
     }
 
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         content.badge = (UIApplication.shared.applicationIconBadgeNumber + 1) as NSNumber
         content.sound = UNNotificationSound.default()
         
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 60, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 10, repeats: false)
         let requestIdentifier = "sampleRequest"
         let request = UNNotificationRequest.init(identifier: requestIdentifier, content: content, trigger: trigger)
         center.add(request, withCompletionHandler: { (error:Error?) in
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         content.badge = (UIApplication.shared.applicationIconBadgeNumber + 1) as NSNumber
         content.sound = UNNotificationSound.default()
         
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 70, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5, repeats: false)
         let requestIdentifier = "sampleRequest"
         let request = UNNotificationRequest.init(identifier: requestIdentifier, content: content, trigger: trigger)
         center.add(request, withCompletionHandler: { (error:Error?) in

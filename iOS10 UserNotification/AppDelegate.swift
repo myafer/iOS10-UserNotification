@@ -61,5 +61,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        NotificationCenter.default.post(name:NSNotification.Name(rawValue: "sampleRequest"), object: .none)
+        completionHandler(.alert)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
